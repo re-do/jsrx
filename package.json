@@ -1,25 +1,23 @@
 {
     "name": "jsrx",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "author": "redo.qa",
     "description": "Seamlessly write your npm scripts in JS 💊📜",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
-        "build": "redo-build",
+        "build": "tsc",
         "test": "jest"
     },
     "bin": {
         "jsrx": "./run.js"
     },
     "dependencies": {
-        "@babel/runtime-corejs3": "7.10.3",
-        "@re-do/utils": "0.0.6",
+        "@re-do/utils": "0.0.10",
         "dotenv": "8.2.0",
         "fs-extra": "8.1.0"
     },
     "devDependencies": {
-        "@babel/cli": "7.10.3",
         "@re-do/recommended": "0.0.2",
         "@types/fs-extra": "8.1.0",
         "@types/jest": "24.0.19",
