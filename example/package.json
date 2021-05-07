@@ -1,0 +1,12 @@
+{
+    "name": "example",
+    "version": "0.0.1",
+    "scripts": {
+        "sayHello": "jsrx sayHello",
+        "sayGoodBye": "jsrx sayGoodBye",
+        "jsrxGen": "jsrx jsrxGen"
+    },
+    "devDependencies": {
+        "jsrx": "file:.."
+    }
+}
