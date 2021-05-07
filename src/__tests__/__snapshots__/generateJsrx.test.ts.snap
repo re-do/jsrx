@@ -1,13 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`generates js 1`] = `
-"
-const { jsrx, $, shell } = require(\\"jsrx\\")
+"const { jsrx, $, shell } = require(\\"jsrx\\")
 
 jsrx({
     dev: {
-        sayHello: $(\\"echo hello\\"),
-        sayGoodBye: $(\\"echo goodBye\\")
+        sayHello: $(\`echo hello\`),
+        sayGoodBye: $(\`echo goodBye\`)
     },
     prod: {},
     shared: {}
@@ -16,13 +15,12 @@ jsrx({
 `;
 
 exports[`generates ts 1`] = `
-"
-import { jsrx, $, shell } from \\"jsrx\\"
+"import { jsrx, $, shell } from \\"jsrx\\"
 
 jsrx({
     dev: {
-        sayHello: $(\\"echo hello\\"),
-        sayGoodBye: $(\\"echo goodBye\\")
+        sayHello: $(\`echo hello\`),
+        sayGoodBye: $(\`echo goodBye\`)
     },
     prod: {},
     shared: {}

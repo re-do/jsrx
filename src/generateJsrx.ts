@@ -13,8 +13,7 @@ const tsImportsTemplate = `import { jsrx, $, shell } from "jsrx"`
 export const generateFileContents = (
     scripts: Record<string, string>,
     { language }: GenerateJsrxOptions
-) => `
-${language === "js" ? jsImportsTemplate : tsImportsTemplate}
+) => `${language === "js" ? jsImportsTemplate : tsImportsTemplate}
 
 jsrx({
     dev: {
@@ -25,7 +24,7 @@ jsrx({
                         "Cannot generate a jsrx file from package.json scripts that already rely on jsrx. If you've deleted your jsrx file, you should manually put it back."
                     )
                 }
-                return `${name}: $("${command}")`
+                return `${name}: $(\`${command}\`)`
             })
             .join(",\n        ")}
     },
