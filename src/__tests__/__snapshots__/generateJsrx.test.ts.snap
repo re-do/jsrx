@@ -6,7 +6,8 @@ exports[`generates js 1`] = `
 jsrx({
     dev: {
         sayHello: $(\`echo hello\`),
-        sayGoodBye: $(\`echo goodBye\`)
+        sayGoodBye: $(\`echo goodBye\`),
+        \\"handle:non-alpha\\": $(\`echo handled\`)
     },
     prod: {},
     shared: {}
@@ -20,7 +21,8 @@ exports[`generates ts 1`] = `
 jsrx({
     dev: {
         sayHello: $(\`echo hello\`),
-        sayGoodBye: $(\`echo goodBye\`)
+        sayGoodBye: $(\`echo goodBye\`),
+        \\"handle:non-alpha\\": $(\`echo handled\`)
     },
     prod: {},
     shared: {}

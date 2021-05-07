@@ -24,7 +24,11 @@ jsrx({
                         "Cannot generate a jsrx file from package.json scripts that already rely on jsrx. If you've deleted your jsrx file, you should manually put it back."
                     )
                 }
-                return `${name}: $(\`${command}\`)`
+                return `${
+                    // Put script name in quotes if it's not alphanumeric
+                    /[^a-zA-Z0-9]/.test(name) ? `"${name}"` : name
+                    // Put script value in backticks to try and avoid conflicts
+                }: $(\`${command}\`)`
             })
             .join(",\n        ")}
     },

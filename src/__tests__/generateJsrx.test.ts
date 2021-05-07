@@ -2,7 +2,8 @@ import { generateFileContents } from "../generateJsrx"
 
 const scripts = {
     sayHello: "echo hello",
-    sayGoodBye: "echo goodBye"
+    sayGoodBye: "echo goodBye",
+    "handle:non-alpha": "echo handled"
 }
 
 it("generates js", () => {
