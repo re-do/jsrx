@@ -13,7 +13,9 @@ export const run = async () => {
     }
 
     const runner =
-        jsrxConfigFile === "jsrx.js" ? "node" : "npx ts-node --transpile-only"
+        jsrxConfigFile === "jsrx.js"
+            ? "node"
+            : `npx ts-node --transpile-only -O '{"module": "commonjs"}'`
 
     const jsrxArgIndex = process.argv.findIndex((arg) =>
         arg.endsWith("jsrx/dist/run.js")
