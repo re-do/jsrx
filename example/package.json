@@ -4,8 +4,8 @@
     "scripts": {
         "sayHello": "jsrx sayHello",
         "sayGoodBye": "jsrx sayGoodBye",
-        "jsrxGen": "jsrx jsrxGen",
-        "handle:non-alpha": "jsrx handle:non-alpha"
+        "handle:non-alpha": "jsrx handle:non-alpha",
+        "jsrxGen": "jsrx jsrxGen"
     },
     "devDependencies": {
         "jsrx": "file:.."
