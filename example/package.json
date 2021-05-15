@@ -2,10 +2,9 @@
     "name": "example",
     "version": "0.0.1",
     "scripts": {
-        "sayHello": "jsrx sayHello",
-        "sayGoodBye": "jsrx sayGoodBye",
-        "handle:non-alpha": "jsrx handle:non-alpha",
-        "jsrxGen": "jsrx jsrxGen"
+        "sayHello": "echo Hello",
+        "sayGoodBye": "echo GoodBye",
+        "handle:non-alpha": "echo Handled"
     },
     "devDependencies": {
         "jsrx": "file:.."

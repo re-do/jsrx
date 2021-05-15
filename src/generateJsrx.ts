@@ -51,7 +51,7 @@ export const generateJsrx = (options: GenerateJsrxOptions) => {
 
 export const promptForJsrxFile = async () => {
     const shouldGenerate = await prompt(
-        `Found no 'jsrx.js' or 'jsrx.ts' file in ${process.cwd()}. Would you like to generate one from your pakage.json?`,
+        `Found no 'jsrx.js' or 'jsrx.ts' file in ${process.cwd()}. Would you like to generate one from your package.json?`,
         "confirm"
     )
     if (shouldGenerate) {
