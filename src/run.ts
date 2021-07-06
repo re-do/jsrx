@@ -1,5 +1,6 @@
 import { readdirSync } from "fs-extra"
-import { shell } from "@re-do/node-utils"
+import { join } from "path"
+import { shell, getOs } from "@re-do/node-utils"
 import { promptForJsrxFile } from "./generateJsrx"
 
 export const run = async () => {
@@ -15,10 +16,10 @@ export const run = async () => {
     const runner =
         jsrxConfigFile === "jsrx.js"
             ? "node"
-            : `npx ts-node --transpile-only -O '{"module": "commonjs"}'`
+            : `npx ts-node --transpile-only -O  ${getOs() === "windows" ? `"{""module"": ""commonjs""}"` : `'{"module": "commonjs"}'`}`
 
     const jsrxArgIndex = process.argv.findIndex((arg) =>
-        arg.endsWith("jsrx/dist/run.js")
+        arg.endsWith(join("jsrx", "dist", "run.js"))
     )
     // If 'jsrx' was not found or was the last arg, quit
     if (jsrxArgIndex === -1 || jsrxArgIndex >= process.argv.length - 1) {
